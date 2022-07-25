@@ -21,3 +21,12 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+# should lower case everything
+# ignore spaces
+# make into list and then mutate it with comprehension to get rid of spaces
+# we can replace white space and then reverse with slice
+    phrase = phrase.replace(" ", "").lower()
+    phrase2 = phrase[::-1]
+
+    return phrase == phrase2
+    
