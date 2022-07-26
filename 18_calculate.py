@@ -28,3 +28,26 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
           ...
         ValueError: Invalid Operation
     """
+    total = 0
+
+    if  not (operation =="add" or operation =="subtract" or operation =="multiply" or operation =="divide"):
+        raise ValueError('Invalid Operation')
+
+    if operation == "add":
+        total = a+b
+
+    elif operation == "subtract":
+        total = a-b
+
+    elif operation == "multiply":
+        total = a*b
+
+    elif operation == "divide":
+        total = a/b
+
+    # can put else here and raise ValueError
+
+    if make_int:
+        return f"{message} {int(total)}"
+    else:
+        return f"{message} {(total)}"
